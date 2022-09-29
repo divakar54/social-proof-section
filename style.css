@@ -1,0 +1,133 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+:root{
+    font-family: 'Spartan',sans-serif;    
+    --font-color-magenta: hsl(300, 43%, 22%);
+}
+
+.container{
+    width: 90%;
+    max-width: 75%;
+    margin: 4em auto;
+}
+
+.header{
+    margin-bottom: 2em;
+}
+
+.header p {
+    margin-top: 1em;
+}
+.text-align-centre{
+    text-align: center;
+}
+
+.font-color-magenta{
+    color: var(--font-color-magenta);
+}
+.flex{
+    display: flex;
+    gap: 1em;
+}
+
+.rating{
+    flex-direction: column;
+    align-self: center;
+}
+
+.rating-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 12px;
+    padding-bottom: 1em;
+}
+
+.rating-item > *:last-child {
+    font-weight: 700;
+    color: var(--font-color-magenta);
+}
+
+.star{
+    width: 15%;
+    margin: 1em 0;
+}
+
+.grid-container{
+    display: grid;
+    margin-top: 3em;
+    gap: 1em;
+}
+
+.grid-item{
+    background-color: var(--font-color-magenta);
+    color: white;
+    border-radius: 12px;
+    padding: 2em 1.5em;
+    font-size: 0.75rem;
+}
+
+.font-pink{
+    color: hsl(333, 80%, 67%);
+}
+
+.grid-item-card > *:nth-child(2){
+    margin-left: 1em;
+}
+.grid-item > img {
+    border-radius: 50%;
+}
+
+.grid-item-card{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.grid-item-card > img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width:768px) {
+    
+    .top-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header{
+        width: 40%;
+    }
+    .header h1 p{
+        text-align: left;
+    }
+    .text-align-centre{
+        text-align: left;
+    }
+    .rating{
+        width: 40%;
+    }
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-container > *:nth-child(2){
+        transform: translateY(1em);
+    }
+    .grid-container > *:nth-child(3){
+        transform: translateY(2em);
+    }
+    .attribution{
+        margin-top: 10em;
+    }
+}
